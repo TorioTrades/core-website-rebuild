@@ -32,44 +32,31 @@ const Gallery = () => {
           </p>
         </div>
 
-        <div className="relative">
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            className="w-full max-w-5xl mx-auto"
-          >
-            <CarouselContent>
-              {galleryImages.map((image, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-2">
-                    <div className="relative overflow-hidden rounded-xl shadow-lg aspect-[3/4] group">
-                      <img
-                        src={image.src}
-                        alt={image.alt}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                      />
-                    </div>
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full max-w-5xl mx-auto"
+        >
+          <CarouselContent>
+            {galleryImages.map((image, index) => (
+              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                <div className="p-2">
+                  <div className="relative overflow-hidden rounded-xl shadow-lg aspect-[3/4] group">
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
                   </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="hidden md:flex" />
-            <CarouselNext className="hidden md:flex" />
-          </Carousel>
-          
-          {/* Mobile scroll indicator */}
-          <div className="md:hidden absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none">
-            <div className="bg-gradient-to-l from-background via-background/80 to-transparent pl-8 pr-4 py-8">
-              <div className="flex items-center gap-1 animate-pulse">
-                <div className="w-1.5 h-1.5 rounded-full bg-primary"></div>
-                <div className="w-1.5 h-1.5 rounded-full bg-primary opacity-70"></div>
-                <div className="w-1.5 h-1.5 rounded-full bg-primary opacity-40"></div>
-              </div>
-            </div>
-          </div>
-        </div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="hidden md:flex" />
+          <CarouselNext className="hidden md:flex" />
+        </Carousel>
       </div>
     </section>
   );
