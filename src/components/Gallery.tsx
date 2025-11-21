@@ -41,7 +41,7 @@ const Gallery = () => {
         >
           <CarouselContent>
             {galleryImages.map((image, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+              <CarouselItem key={index} className="basis-[85%] md:basis-1/2 lg:basis-1/3">
                 <div className="p-2">
                   <div className="relative overflow-hidden rounded-xl shadow-lg aspect-[3/4] group">
                     <img
