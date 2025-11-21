@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroWoman from "@/assets/hero-woman-1.jpg";
+import heroWoman from "@/assets/hero-woman-new.png";
 
 interface PromotionsProps {
   onBookingClick: () => void;
