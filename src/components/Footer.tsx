@@ -1,8 +1,15 @@
-import { Phone, Mail, MapPin, Clock, Facebook } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Facebook, ChevronDown } from "lucide-react";
+import { useState } from "react";
 
 const Footer = () => {
+  const [openSection, setOpenSection] = useState<string | null>(null);
+  
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const toggleSection = (section: string) => {
+    setOpenSection(openSection === section ? null : section);
   };
 
   return (
@@ -27,8 +34,14 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold text-base md:text-lg text-foreground mb-3 md:mb-4">Quick Links</h4>
-            <ul className="space-y-2 md:space-y-3">
+            <button 
+              onClick={() => toggleSection('links')}
+              className="flex items-center justify-between w-full md:cursor-default"
+            >
+              <h4 className="font-semibold text-base md:text-lg text-foreground mb-3 md:mb-4">Quick Links</h4>
+              <ChevronDown className={`w-5 h-5 text-foreground transition-transform md:hidden ${openSection === 'links' ? 'rotate-180' : ''}`} />
+            </button>
+            <ul className={`space-y-2 md:space-y-3 ${openSection === 'links' ? 'block' : 'hidden md:block'}`}>
               <li>
                 <button 
                   onClick={() => scrollToSection('home')}
@@ -66,8 +79,14 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="font-semibold text-base md:text-lg text-foreground mb-3 md:mb-4">Services</h4>
-            <ul className="space-y-2 md:space-y-3 text-sm md:text-base text-muted-foreground">
+            <button 
+              onClick={() => toggleSection('services')}
+              className="flex items-center justify-between w-full md:cursor-default"
+            >
+              <h4 className="font-semibold text-base md:text-lg text-foreground mb-3 md:mb-4">Services</h4>
+              <ChevronDown className={`w-5 h-5 text-foreground transition-transform md:hidden ${openSection === 'services' ? 'rotate-180' : ''}`} />
+            </button>
+            <ul className={`space-y-2 md:space-y-3 text-sm md:text-base text-muted-foreground ${openSection === 'services' ? 'block' : 'hidden md:block'}`}>
               <li>Hair Cut & Styling</li>
               <li>Brazilian Keratin</li>
               <li>Hair Color & Highlights</li>
@@ -78,8 +97,14 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-semibold text-base md:text-lg text-foreground mb-3 md:mb-4">Contact Us</h4>
-            <ul className="space-y-3 md:space-y-4">
+            <button 
+              onClick={() => toggleSection('contact')}
+              className="flex items-center justify-between w-full md:cursor-default"
+            >
+              <h4 className="font-semibold text-base md:text-lg text-foreground mb-3 md:mb-4">Contact Us</h4>
+              <ChevronDown className={`w-5 h-5 text-foreground transition-transform md:hidden ${openSection === 'contact' ? 'rotate-180' : ''}`} />
+            </button>
+            <ul className={`space-y-3 md:space-y-4 ${openSection === 'contact' ? 'block' : 'hidden md:block'}`}>
               <li className="flex items-start space-x-2 md:space-x-3">
                 <Phone className="w-4 h-4 md:w-5 md:h-5 text-primary flex-shrink-0 mt-1" />
                 <div>
