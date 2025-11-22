@@ -152,10 +152,15 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-6 md:pt-8 border-t border-border text-center">
-          <p className="text-xs md:text-sm text-muted-foreground">
-            © {new Date().getFullYear()} CJ Hair Lounge. All rights reserved. Crafted with care for your beauty journey.
-          </p>
+        <div className="pt-6 md:pt-8 border-t border-border">
+          <div className="text-center space-y-3">
+            <p className="text-xs md:text-sm text-muted-foreground">
+              © {new Date().getFullYear()} CJ Hair Lounge. All rights reserved. Crafted with care for your beauty journey.
+            </p>
+            <p className="text-xs text-muted-foreground/80">
+              Powered by <span className="text-primary font-semibold">LOVABLE</span>
+            </p>
+          </div>
         </div>
       </div>
     </footer>
