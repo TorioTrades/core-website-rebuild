@@ -1,8 +1,6 @@
 import { MapPin, Clock, Phone, Mail } from "lucide-react";
-
 const Location = () => {
-  return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-background via-secondary/20 to-secondary/30 px-4">
+  return <section className="py-16 md:py-24 bg-gradient-to-b from-background via-secondary/20 to-secondary/30 px-4">
       <div className="container mx-auto max-w-7xl">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
           {/* Location Info */}
@@ -51,7 +49,7 @@ const Location = () => {
                   <h3 className="font-semibold text-lg text-foreground mb-2">Contact</h3>
                   <p className="text-muted-foreground">
                     Clinic: <a href="tel:09994648856" className="hover:text-primary transition-colors">09994648856</a><br />
-                    Email: <a href="mailto:tumaladentalclinic@gmail.com" className="hover:text-primary transition-colors">tumaladentalclinic@gmail.com</a>
+                    Email: <a href="mailto:tumaladentalclinic@gmail.com" className="hover:text-primary transition-colors">Cjhairlounge.07@gmail.com</a>
                   </p>
                 </div>
               </div>
@@ -60,22 +58,12 @@ const Location = () => {
 
           {/* Map */}
           <div className="relative h-[400px] md:h-[500px] rounded-lg overflow-hidden shadow-large border-2 border-primary/20">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3847.0!2d120.5897!3d15.1460!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTXCsDA4JzQ1LjYiTiAxMjDCsDM1JzIyLjkiRQ!5e0!3m2!1sen!2sph!4v1234567890123!5m2!1sen!2sph&markers=color:red%7C15.1460,120.5897"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="CJ Hair Lounge Location"
-              className="grayscale-[30%] contrast-110 brightness-105"
-            />
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3847.0!2d120.5897!3d15.1460!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTXCsDA4JzQ1LjYiTiAxMjDCsDM1JzIyLjkiRQ!5e0!3m2!1sen!2sph!4v1234567890123!5m2!1sen!2sph&markers=color:red%7C15.1460,120.5897" width="100%" height="100%" style={{
+            border: 0
+          }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="CJ Hair Lounge Location" className="grayscale-[30%] contrast-110 brightness-105" />
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Location;
