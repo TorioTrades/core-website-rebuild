@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -15,6 +15,23 @@ import { Calendar } from "lucide-react";
 
 const Index = () => {
   const [bookingOpen, setBookingOpen] = useState(false);
+  const [isFooterVisible, setIsFooterVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const footer = document.getElementById('contact');
+      if (footer) {
+        const footerRect = footer.getBoundingClientRect();
+        const isVisible = footerRect.top < window.innerHeight;
+        setIsFooterVisible(isVisible);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+    
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <div id="home" className="min-h-screen bg-background">
@@ -34,7 +51,9 @@ const Index = () => {
       <Button
         onClick={() => setBookingOpen(true)}
         size="lg"
-        className="fixed bottom-8 right-8 rounded-full shadow-lg bg-primary hover:bg-primary/90 text-primary-foreground z-50"
+        className={`fixed bottom-8 right-8 rounded-full shadow-lg bg-primary hover:bg-primary/90 text-primary-foreground z-50 transition-opacity duration-300 ${
+          isFooterVisible ? 'opacity-0 pointer-events-none' : 'opacity-100'
+        }`}
       >
         <Calendar className="mr-2 h-5 w-5" />
         Book Now
