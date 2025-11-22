@@ -158,7 +158,7 @@ const Footer = () => {
               © {new Date().getFullYear()} CJ Hair Lounge. All rights reserved. Crafted with care for your beauty journey.
             </p>
             <p className="text-xs text-muted-foreground/80">
-              Powered by <span className="text-primary font-semibold">LOVABLE</span>
+              Powered by <span className="text-primary font-semibold">TORIOWEB</span>
             </p>
           </div>
         </div>
