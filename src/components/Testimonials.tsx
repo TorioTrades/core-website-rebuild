@@ -40,7 +40,7 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <Card 
               key={testimonial.name}
-              className="p-6 md:p-8 bg-card border-0 shadow-lg hover-lift animate-scale-in"
+              className="p-4 md:p-6 bg-card border-0 shadow-lg hover-lift animate-scale-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="flex mb-3 md:mb-4">
