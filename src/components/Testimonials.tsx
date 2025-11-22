@@ -10,7 +10,7 @@ const Testimonials = () => {
     },
     {
       name: "Maria Cruz",
-      review: "Nice saloon... Good services, affordable prices. Their cuddle is not so well! 👍",
+      review: "Nice services, affordable prices. Nice staff 👍",
       rating: 5,
     },
     {
