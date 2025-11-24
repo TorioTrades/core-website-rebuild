@@ -1,4 +1,10 @@
 import { Card } from "@/components/ui/card";
+import hairService from "@/assets/hair-service.jpg";
+import beautyService from "@/assets/beauty-service.jpg";
+import makeupService from "@/assets/makeup-service.jpg";
+import extensionsService from "@/assets/extensions-service.jpg";
+import therapyService from "@/assets/therapy-service.jpg";
+import nailsService from "@/assets/nails-service.jpg";
 
 interface ServicesProps {
   onBookingClick: () => void;
@@ -8,48 +14,56 @@ const Services = ({ onBookingClick }: ServicesProps) => {
   const packageServices = [
     {
       title: "Hair Color",
+      image: beautyService,
       prices: [
         { length: "Starting at", price: "₱1500" },
       ],
     },
     {
       title: "Hair Mask or Treatment",
+      image: therapyService,
       prices: [
         { length: "Starting at", price: "₱1500" },
       ],
     },
     {
       title: "Highlights and Tone with Hair Mask Treatment",
+      image: hairService,
       prices: [
         { length: "Starting at", price: "₱3000" },
       ],
     },
     {
       title: "Balayage & Tone with Hair Mask Treatment",
+      image: extensionsService,
       prices: [
         { length: "Starting at", price: "₱3500" },
       ],
     },
     {
       title: "Keratin & Brazilian with Hair Color and Hair Mask",
+      image: makeupService,
       prices: [
         { length: "Starting at", price: "₱3000" },
       ],
     },
     {
       title: "Keratin with Hair Color and Hair Mask",
+      image: nailsService,
       prices: [
         { length: "Starting at", price: "₱3500" },
       ],
     },
     {
       title: "Brazilian Blow Out Original with Hair Color and Hair Mask",
+      image: hairService,
       prices: [
         { length: "Starting at", price: "₱4000" },
       ],
     },
     {
       title: "One Step Rebond with Hair Color and Hair Mask",
+      image: beautyService,
       prices: [
         { length: "Starting at", price: "₱2500" },
       ],
@@ -81,13 +95,23 @@ const Services = ({ onBookingClick }: ServicesProps) => {
             {packageServices.map((service, index) => (
               <Card 
                 key={service.title}
-                className="overflow-hidden border border-border shadow-md hover:shadow-lg transition-shadow duration-300 bg-card animate-scale-in"
+                className="group overflow-hidden border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-card animate-scale-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="p-4 md:p-6">
-                  <h4 className="text-base md:text-lg font-serif font-bold text-foreground mb-4">
-                    {service.title}
-                  </h4>
+                <div className="relative h-48 md:h-56 overflow-hidden">
+                  <img 
+                    src={service.image}
+                    alt={`${service.title} at CJ Hair Lounge`}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                  <div className="absolute bottom-4 left-4">
+                    <h4 className="text-white text-base md:text-lg font-serif font-bold leading-tight">
+                      {service.title}
+                    </h4>
+                  </div>
+                </div>
+                <div className="p-4 md:p-6 bg-secondary/20">
                   <div className="space-y-2">
                     {service.prices.map((priceItem) => (
                       <div key={priceItem.length} className="flex justify-between items-center py-2 border-t border-border/50">
