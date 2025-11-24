@@ -1,10 +1,11 @@
 import { Card } from "@/components/ui/card";
-import hairService from "@/assets/hair-service.jpg";
-import beautyService from "@/assets/beauty-service.jpg";
-import makeupService from "@/assets/makeup-service.jpg";
-import extensionsService from "@/assets/extensions-service.jpg";
-import therapyService from "@/assets/therapy-service.jpg";
-import nailsService from "@/assets/nails-service.jpg";
+import hairColorImg from "@/assets/package-hair-color.jpg";
+import hairMaskImg from "@/assets/package-hair-mask.jpg";
+import highlightsImg from "@/assets/package-highlights.jpg";
+import balayageImg from "@/assets/package-balayage.jpg";
+import keratinImg from "@/assets/package-keratin.jpg";
+import brazilianImg from "@/assets/package-brazilian.jpg";
+import rebondImg from "@/assets/package-rebond.jpg";
 
 interface ServicesProps {
   onBookingClick: () => void;
@@ -14,56 +15,56 @@ const Services = ({ onBookingClick }: ServicesProps) => {
   const packageServices = [
     {
       title: "Hair Color",
-      image: beautyService,
+      image: hairColorImg,
       prices: [
         { length: "Starting at", price: "₱1500" },
       ],
     },
     {
       title: "Hair Mask or Treatment",
-      image: therapyService,
+      image: hairMaskImg,
       prices: [
         { length: "Starting at", price: "₱1500" },
       ],
     },
     {
       title: "Highlights and Tone with Hair Mask Treatment",
-      image: hairService,
+      image: highlightsImg,
       prices: [
         { length: "Starting at", price: "₱3000" },
       ],
     },
     {
       title: "Balayage & Tone with Hair Mask Treatment",
-      image: extensionsService,
+      image: balayageImg,
       prices: [
         { length: "Starting at", price: "₱3500" },
       ],
     },
     {
       title: "Keratin & Brazilian with Hair Color and Hair Mask",
-      image: makeupService,
+      image: keratinImg,
       prices: [
         { length: "Starting at", price: "₱3000" },
       ],
     },
     {
       title: "Keratin with Hair Color and Hair Mask",
-      image: nailsService,
+      image: keratinImg,
       prices: [
         { length: "Starting at", price: "₱3500" },
       ],
     },
     {
       title: "Brazilian Blow Out Original with Hair Color and Hair Mask",
-      image: hairService,
+      image: brazilianImg,
       prices: [
         { length: "Starting at", price: "₱4000" },
       ],
     },
     {
       title: "One Step Rebond with Hair Color and Hair Mask",
-      image: beautyService,
+      image: rebondImg,
       prices: [
         { length: "Starting at", price: "₱2500" },
       ],
