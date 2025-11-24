@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import hairColorImg from "@/assets/package-hair-color.jpg";
+import hairColorImg from "@/assets/package-hair-color-new.jpg";
 import hairMaskImg from "@/assets/package-hair-mask-custom.jpg";
 import highlightsImg from "@/assets/package-highlights.jpg";
 import balayageImg from "@/assets/package-balayage.jpg";
