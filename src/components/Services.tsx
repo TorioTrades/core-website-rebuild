@@ -3,7 +3,7 @@ import hairColorImg from "@/assets/package-hair-color-new.jpg";
 import hairMaskImg from "@/assets/package-hair-mask-custom.jpg";
 import highlightsImg from "@/assets/package-highlights.jpg";
 import balayageImg from "@/assets/package-balayage.jpg";
-import keratinImg from "@/assets/package-keratin.jpg";
+import keratinImg from "@/assets/package-keratin-custom.jpg";
 import brazilianImg from "@/assets/package-brazilian.jpg";
 import rebondImg from "@/assets/package-rebond.jpg";
 
